@@ -1,0 +1,6 @@
+# Machine specifics tasks
+.vscode/tasks.json
+# Executable artifacts
+**.exe
+# Brainfuck sources
+examples/*.bf
