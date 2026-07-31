@@ -6,7 +6,7 @@
        01 MEMORY.
            05 MEMORY-ROW OCCURS MEMORY-SIZE TIMES INDEXED BY MEMORY-PTR.
                10 MEMORY-C        BINARY-CHAR UNSIGNED.
-       01 CODE-PTR                BINARY-SHORT.
+       01 CODE-PTR                BINARY-LONG.
       *>  Temporary values
        01 TEMPORARY-BUFFER.
            05 CUR-CHR             PIC X VALUE ZERO.
@@ -16,7 +16,7 @@
            05 DEPTH               PIC IS 9(2).
        LINKAGE SECTION.
        01 IN-CODE                 PIC IS X ANY LENGTH.
-       01 CODE-LEN                BINARY-SHORT UNSIGNED.
+       01 CODE-LEN                BINARY-LONG UNSIGNED.
        PROCEDURE DIVISION USING IN-CODE, CODE-LEN.
        1100-INITIALIZE-INTERPRETER.
            MOVE 1 to CODE-PTR.
